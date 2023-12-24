@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- release v4.3.6, copyright 2014 - 2017 Kartik Visweswaran -->
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8" />
+    <title>Android使用Echarts示例</title>
+
+
+</head>
+
+<body style="height: 100%; margin: 0">
+<div id="main" style="height: 100%;"></div>
+<script src="./echarts.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("resize",function(){
+        option.chart.resize();
+});
+    //初始化路径
+    var myChart;
+     /**require.config({
+            paths: {
+                echarts: './'
+            }
+        });**/
+    //  通用属性定义
+    var options = {
+                title : {
+                    text : ""
+                },
+                tooltip : {
+                    show : false
+                },
+                toolbox : {
+                    show : false
+                },
+            };
+
+
+        function doCreatChart(type,jsondata,series,name){
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: name
+            },
+            tooltip: {},
+            legend: {
+                data:['金额']
+            },
+            xAxis: {
+                data: series
+            },
+            yAxis: {},
+            series: [{
+                name: '金额',
+                type: type,
+                data: jsondata
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+        }
+
+
+    //doCreatChart('line',[89,78,77,66,44,55]);
+    //docreateChart('bar',[89,78,77]);
+    //docreateChart('pie',[89,78,77]);
+    </script>
+</body>
+
+</html>

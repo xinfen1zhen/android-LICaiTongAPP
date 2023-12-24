@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="用户名"
+            android:textColor="@color/colorMain"
+            android:textSize="26dp" />
+        <EditText
+            android:id="@+id/txtuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvuser"
+            android:hint="请输入用户名" >
+        </EditText>
+        <TextView
+            android:id="@+id/tvpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtuser"
+            android:layout_gravity="center"
+            android:text="密码"
+            android:textSize="26dp"
+            android:textColor="@color/colorMain"/>
+        <EditText
+            android:id="@+id/txtpwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvpwd"
+            android:inputType="textPassword"
+            android:hint="请输入密码" >
+        </EditText>
+        <TextView
+            android:id="@+id/tvpwd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtuser"
+            android:layout_gravity="center"
+            android:text="确认密码"
+            android:textSize="26dp"
+            android:textColor="@color/colorMain"/>
+        <EditText
+            android:id="@+id/txtpwd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvpwd"
+            android:inputType="textPassword"
+            android:hint="请确认密码" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btregister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtpwd"
+            android:layout_alignRight="@+id/txtpwd"
+            android:text="注册" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="left|top"
+                android:text="登录" />
+
+            <Button
+                android:id="@+id/btexit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right|top"
+                android:text="退出" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

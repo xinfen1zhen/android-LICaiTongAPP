@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.qimo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".manage_note"></activity>
+        <activity android:name=".picture_outcome" />
+        <activity android:name=".picture_income" />
+        <activity android:name=".change_outcome" />
+        <activity android:name=".change_income" />
+        <activity android:name=".add_note" />
+        <activity android:name=".add_outcome" />
+        <activity android:name=".add_income" />
+        <activity android:name=".setting" />
+        <activity android:name=".note" />
+        <activity android:name=".outcome" />
+        <activity android:name=".income" />
+        <activity android:name=".help" />
+        <activity android:name=".register" />
+        <activity android:name=".main_menu" />
+        <activity android:name=".login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

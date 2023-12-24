@@ -1,0 +1,1 @@
+/src/qimo/app/release/app-release.apk
